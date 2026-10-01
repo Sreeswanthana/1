@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sree Swanthana</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./assets/images/photo.jpg?v=3">
+    <link rel="shortcut icon" type="image/jpeg" href="./assets/images/photo.jpg?v=3">
+    <link rel="apple-touch-icon" href="./assets/images/photo.jpg?v=3">
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Prevent text selection and copy */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Keep form inputs selectable for normal typing */
+        input,
+        textarea {
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            /* centers buttons horizontally */
+            align-items: center;
+            /* vertically aligns buttons if needed */
+            gap: 10px;
+            /* spacing between buttons */
+            margin-top: 10px;
+        }
+
+
+        #preloader {
+            transition: opacity 0.6s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loaderouter {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .smcard-loader {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            background: #e0e0e0;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .smcard-loader .content {
+            flex: 1;
+        }
+
+        .line {
+            height: 14px;
+            border-radius: 6px;
+            background: #e0e0e0;
+            margin: 6px 0;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .line.short {
+            width: 40%;
+        }
+
+        .line.medium {
+            width: 60%;
+        }
+
+        .line.long {
+            width: 80%;
+        }
+
+        @keyframes pulse {
+            0% {
+                background-color: #e0e0e0;
+            }
+
+            50% {
+                background-color: #f0f0f0;
+            }
+
+            100% {
+                background-color: #e0e0e0;
+            }
+        }
+
+        /* loader 2*/
+
+        .card-loader {
+            width: 260px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .full_image {
+            width: 100%;
+            height: 150px;
+            background: #e0e0e0;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .card-loader-content {
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+
+        <div class="loaderouter">
+            <div class="smcard-loader">
+                <div class="image"></div>
+                <div class="content">
+                    <div class="line short"></div>
+                    <div class="line long"></div>
+                    <div class="line medium"></div>
+                </div>
+            </div>
+            <div class="card-loader">
+                <div class="full_image"></div>
+                <div class="card-loader-content">
+                    <div class="line long"></div>
+                    <div class="line short"></div>
+                    <div class="line medium"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+
+        <!--
+      - #SIDEBAR
+    -->
+
+        <aside class="sidebar" data-sidebar>
+
+            <div class="sidebar-info">
+
+                <figure class="avatar-box">
+                    <img src="./assets/images/photo.jpg" alt="Sree Swanthana" width="80" style="border-radius: 10px;">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Sree Swanthana">Sree Swanthana</h1>
+
+                    <p class="title">Mobile App Developer</p>
+
+                </div>
+
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+
+            </div>
+
+            <div class="sidebar-info_more">
+
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:sreesanthwana@gmail.com" class="contact-link">sreesanthwana@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+919567508206" class="contact-link">+91 9567508206</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="2004-05-19">May 19, 2004</time>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Ernamkulam, Kerala</address>
+                        </div>
+
+                    </li>
+
+
+
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/sree-swanthana-356ba1303/" target="_blank"
+                            class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://wa.me/919567508206" target="_blank" class="social-link">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+
+
+
+
+        <!--
+      - #main-content
+    -->
+
+        <div class="main-content">
+
+            <!--
+        - #NAVBAR
+      -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <button class="navbar-link  active" data-nav-link>About</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Contact</button>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+
+
+            <!--
+        - #ABOUT
+      -->
+
+            <article class="about  active" data-page="about">
+
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        I’m a passionate Flutter Developer with 2+ years of professional experience building modern,
+                        scalable, and production-ready mobile applications for Android and iOS. I specialize in Flutter,
+                        Dart, RESTful APIs, responsive UI development, state management, and MVVM/Clean Architecture.
+                    </p>
+
+                    <p>
+                        Throughout my experience, I have contributed to and delivered multiple production-level
+                        applications, including e-commerce, jewellery, mobility, delivery, logistics, payment, and
+                        business applications. I have hands-on experience in developing features from UI implementation
+                        and API integration to debugging, performance optimization, testing, and production deployment.
+                    </p>
+
+                    <p>
+                        I have successfully contributed to 10+ Flutter applications and deployed 7+ applications, with
+                        experience in Google Play Store and App Store release processes. I’m also comfortable working
+                        with Firebase, third-party SDKs, authentication, payment gateways, real-time tracking,
+                        notifications, and other mobile application integrations.
+                    </p>
+
+                </section>
+
+
+
+
+                <!--
+          - service
+        -->
+
+                <section class="service">
+
+                    <h3 class="h3 service-title">What i'm doing</h3>
+
+                    <ul class="service-list">
+
+                        <!-- Flutter App Development -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="3"></rect>
+                                    <path d="M12 18h.01"></path>
+                                    <path d="M10 7l4 4-4 4"></path>
+                                    <path d="M14 7l-4 4"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Flutter App Development</h4>
+                                <p class="service-item-text">
+                                    Building scalable and high-performance mobile applications using Flutter and Dart
+                                    for Android and iOS.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Responsive UI/UX Development -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="4" width="13" height="10" rx="2"></rect>
+                                    <path d="M5 17h7"></path>
+                                    <path d="M8.5 14v3"></path>
+                                    <rect x="13" y="8" width="9" height="13" rx="2"></rect>
+                                    <circle cx="17.5" cy="18" r="0.5" fill="rgb(255,219,112)"></circle>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Responsive UI/UX Development</h4>
+                                <p class="service-item-text">
+                                    Creating modern, responsive, and pixel-perfect interfaces that work smoothly across
+                                    different screen sizes.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Android & iOS Development -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="8" height="14" rx="2"></rect>
+                                    <path d="M7 14h.01"></path>
+                                    <rect x="13" y="7" width="8" height="14" rx="2"></rect>
+                                    <path d="M17 18h.01"></path>
+                                    <path d="M7 3V2M17 7V6"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Android & iOS Development</h4>
+                                <p class="service-item-text">
+                                    Developing cross-platform applications with consistent functionality and user
+                                    experience across Android and iOS.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- REST API Integration -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="6" rx="2"></rect>
+                                    <rect x="3" y="14" width="18" height="6" rx="2"></rect>
+                                    <circle cx="7" cy="7" r="1" fill="rgb(255,219,112)"></circle>
+                                    <circle cx="7" cy="17" r="1" fill="rgb(255,219,112)"></circle>
+                                    <path d="M13 10v4"></path>
+                                    <path d="M10 12h6"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">REST API Integration</h4>
+                                <p class="service-item-text">
+                                    Integrating RESTful APIs, handling JSON data, authentication, API responses, and
+                                    seamless backend communication.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- State Management -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="5" r="3"></circle>
+                                    <circle cx="5" cy="18" r="3"></circle>
+                                    <circle cx="19" cy="18" r="3"></circle>
+                                    <path d="M12 8v4"></path>
+                                    <path d="M7.5 16l3-3"></path>
+                                    <path d="M16.5 16l-3-3"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">State Management</h4>
+                                <p class="service-item-text">
+                                    Implementing scalable state management using GetX, Provider, Riverpod, Bloc, and
+                                    other Flutter solutions.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Firebase Integration -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 3z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Firebase Integration</h4>
+                                <p class="service-item-text">
+                                    Integrating Firebase services including Authentication, Cloud Messaging, Analytics,
+                                    Crashlytics, and other features.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Payment Gateway Integration -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                                    <path d="M6 15h4M16 15h2"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Payment Gateway Integration</h4>
+                                <p class="service-item-text">
+                                    Implementing secure payment workflows and integrating third-party payment gateways
+                                    into Flutter applications.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- App Performance Optimization -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21a9 9 0 1 1 9-9c0 1.5-.5 3-1.5 4.5"></path>
+                                    <path d="M12 12l4-4"></path>
+                                    <path d="M12 7v1M8.5 8.5l.7.7M7 12h1"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">App Performance Optimization</h4>
+                                <p class="service-item-text">
+                                    Improving application performance, reducing loading times, optimizing UI rendering,
+                                    and fixing runtime issues.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Play Store Deployment -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                                    </path>
+                                    <path
+                                        d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                                    </path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Play Store Deployment</h4>
+                                <p class="service-item-text">
+                                    Preparing production builds, configuring app signing, managing release versions, and
+                                    publishing applications on Google Play Store
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Flutter Architecture & Clean Code -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Flutter Architecture & Clean Code</h4>
+                                <p class="service-item-text">
+                                    Building well-structured Flutter applications using MVVM and Clean Architecture,
+                                    with reusable widgets, organized code, and scalable project structure
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- App Maintenance & Updates -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">App Maintenance & Updates</h4>
+                                <p class="service-item-text">
+                                    Fixing bugs, implementing new features, updating dependencies, improving existing
+                                    UI/UX, and maintaining production applications.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- Live Tracking & Real-Time Features -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgb(255,219,112)"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                                    <path d="M19 7a4 4 0 0 1 0 6"></path>
+                                    <path d="M5 7a4 4 0 0 0 0 6"></path>
+                                </svg>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Live Tracking & Real-Time Features</h4>
+                                <p class="service-item-text">
+                                    Developing location-based features, live tracking, real-time updates, ride
+                                    management, notifications, and location services.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+
+
+                </section>
+
+            </article>
+
+
+
+
+
+
+
+            <!-- ===========================
+    PORTFOLIO SECTION
+=========================== -->
+
+            <article class="portfolio" data-page="portfolio">
+
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+
+                <section class="projects">
+
+                    <!-- FILTER BUTTONS -->
+                    <ul class="filter-list">
+
+                        <li class="filter-item"><button class="active" data-filter-btn>My Works</button></li>
+
+                    </ul>
+
+                    <!-- SELECT DROPDOWN -->
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-selecct-value>My Works</div>
+                            <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+                        </button>
+
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>My Works</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- PROJECT LIST -->
+                    <ul class="project-list">
+
+                        <!-- Goda App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/search?q=goda&c=apps&hl=en_IN" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/goda.jpg" alt="goda" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">goda</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Oxive Solutions App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.oxive.app" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/oxive-solutions.jpg" alt="Oxive Solutions" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Oxive Solutions</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Cipher Wheels App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.cipherwheels&pcampaignid=web_share" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/cipher-wheels.jpg" alt="Cipher Wheels" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Cipher Wheels</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- TT Devassy App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.ttdevassy&hl=en_IN" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/tt-devassy.jpg" alt="TT Devassy" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">TT Devassy</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Assent Steel App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.assentsteel.vehicle" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/assent-steel.jpg" alt="Assent steel" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Assent steel</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Chungath Jewellery App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/search?q=chungath+jewellery&c=apps&hl=" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/chungath-jewellery.jpg" alt="Chungath Jewellery" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Chungath Jewellery</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Concrete Industries Complex App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.oxivesolutions.readymix.cic.ebrm" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/concrete-industries-complex.jpg" alt="Concrete Industries Complex" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Concrete Industries Complex</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Goda Restaurant App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="https://play.google.com/store/apps/details?id=com.goda.restaurant&hl=en_IN" target="_blank">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/goda-restaurant.jpg" alt="Goda Restaurant" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Goda Restaurant</h3>
+                                <p class="project-category">Mobile App</p>
+                            </a>
+                        </li>
+
+                        <!-- Cipher Eats App -->
+                        <li class="project-item active" data-filter-item data-category="my works">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/cipher-eats.jpg" alt="Cipher Eats" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Cipher Eats</h3>
+                                <p class="project-category">Mobile App (Ongoing)</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+            </article>
+
+
+
+
+
+
+
+
+
+            <!--
+        - #CONTACT
+      -->
+
+            <article class="contact" data-page="contact">
+
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Changampuzha%20Park%20Ernakulam%20Kerala&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                            width="400" height="300" loading="lazy"></iframe>
+                    </figure>
+                </section>
+
+
+
+                <section class="contact-form">
+
+                    <h3 class="h3 form-title">Contact Form</h3>
+
+                    <form class="form" action="mailto:sreesanthwana@gmail.com" method="POST" enctype="text/plain"
+                        data-form id="contactForm" onsubmit="sendEmail(event)">
+
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                                data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required
+                                data-form-input>
+                        </div>
+
+                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
+
+                        <div
+                            style="margin-top: 10px; display: flex; gap: 10px; justify-content: center; align-items: center;">
+                            <div class="button-group">
+                                <button type="button" class="form-btn" onclick="sendWhatsApp()">
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                    <span>Send via WhatsApp</span>
+                                </button>
+
+                                <button type="submit" class="form-btn" data-form-btn disabled>
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                    <span>Send via Email</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+
+                </section>
+
+
+
+
+
+
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <!--
+    - custom js link
+  -->
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Success Popup -->
+    <div id="successPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+    background: rgba(0,0,0,0.75); justify-content:center; align-items:center; z-index:1000;">
+        <div style="background:#1e1e1e; color:#fff; padding:30px; border-radius:12px; max-width:400px; width:90%; 
+                text-align:center; box-shadow:0 0 15px rgba(0,0,0,0.5);">
+            <h3 style="margin-bottom:10px; color:#FFD369;">Message Sent!</h3>
+            <p>Thank you for contacting me. I will get back to you soon.</p>
+            <button onclick="closePopup()" style="margin-top:15px; padding:8px 20px; border:none; 
+              background:#FFD369; color:#000; border-radius:6px; cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function sendWhatsApp() {
+            const form = document.getElementById('contactForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            const name = form.fullname ? form.fullname.value.trim() : '';
+            const email = form.email ? form.email.value.trim() : '';
+            const message = form.message ? form.message.value.trim() : '';
+
+            let text = `Hello, I want to contact you.%0AName: ${name}%0AEmail: ${email}`;
+            if (message) text += `%0AMessage: ${message}`;
+
+            const phone = '919567508206';
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+
+        function sendEmail(e) {
+            if (e) e.preventDefault();
+            const form = document.getElementById('contactForm');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            const name = form.fullname ? form.fullname.value.trim() : '';
+            const email = form.email ? form.email.value.trim() : '';
+            const message = form.message ? form.message.value.trim() : '';
+
+            let subject = encodeURIComponent(`Portfolio Contact from ${name || 'Visitor'}`);
+            let body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            window.location.href = `mailto:sreesanthwana@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        function closePopup() {
+            document.getElementById("successPopup").style.display = "none";
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Show popup if URL contains ?success=true
+        window.addEventListener('load', function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('success') === 'true') {
+                document.getElementById("successPopup").style.display = "flex";
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                document.getElementById("preloader").style.opacity = "0";
+                document.getElementById("preloader").style.pointerEvents = "none";
+            }, 800); // Hide after 0.5 sec
+        });
+    </script>
+
+    <!-- Prevent Right Click, Inspect Element, View Source & Copying -->
+    <script>
+        // 1. Disable Right Click (Context Menu)
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // 2. Disable Inspect Element & View Source Keyboard Shortcuts
+        document.addEventListener('keydown', function (e) {
+            // Disable F12 key
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Disable Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Picker)
+            if (e.ctrlKey && e.shiftKey && (['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key))) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Disable Ctrl+S (Save Page), Ctrl+C (Copy), Ctrl+A (Select All), Ctrl+P (Print)
+            if (e.ctrlKey && (['s', 'S', 'c', 'C', 'a', 'A', 'p', 'P'].includes(e.key))) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // 3. Disable image dragging & text selection
+        document.addEventListener('dragstart', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
+
+        // 4. ANTI-DEBUGGING FREEZE LOOP: If anyone opens DevTools via browser menu, DevTools freezes instantly!
+        setInterval(function () {
+            (function () {
+                return false;
+            })['constructor']('debugger')['call']('action');
+        }, 50);
+    </script>
+</body>
+
+</html>
